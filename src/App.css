@@ -8,7 +8,6 @@
 }
 
 body {
-  margin: 0;
   position: relative;
   min-height: 100vh;
   display: grid;
@@ -16,7 +15,6 @@ body {
   background: #fc466b;
   background: -webkit-linear-gradient(to left, #3f5efb, #fc466b);
   background: linear-gradient(to left, #3f5efb, #fc466b);
-
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
