@@ -52,7 +52,9 @@ h1 {
 
 .input-field::placeholder {
   font-style: italic;
+  font-weight: 500;
   font-family: "Inter", sans-serif;
+  color: rgba(175, 47, 47, 0.2);
 }
 
 .todoForm {
