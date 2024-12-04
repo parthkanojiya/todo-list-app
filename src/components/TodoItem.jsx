@@ -2,10 +2,23 @@ import React from "react";
 import { FaEdit } from "react-icons/fa";
 import { MdDelete } from "react-icons/md";
 
-export default function TodoItem({ todo, handleEdit, handleDelete }) {
+export default function TodoItem({
+  todo,
+  handleEdit,
+  handleDelete,
+  handleToggle,
+}) {
   return (
     <li className="singleTodo">
-      <span className="todoText">{todo.todo}</span>
+      <input
+        type="checkbox"
+        checked={todo.completed}
+        onChange={() => handleToggle(todo.id)}
+        className="todo-checkbox"
+      />
+      <span className={`todoText ${todo.completed ? "completed" : ""}`}>
+        {todo.todo}
+      </span>
       <button className="edit-btn" onClick={() => handleEdit(todo.id)}>
         <FaEdit />
       </button>

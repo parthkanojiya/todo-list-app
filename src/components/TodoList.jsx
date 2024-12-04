@@ -1,7 +1,12 @@
 import React from "react";
 import TodoItem from "./TodoItem";
 
-export default function TodoList({ todos, handleEdit, handleDelete }) {
+export default function TodoList({
+  todos,
+  handleEdit,
+  handleDelete,
+  handleToggle,
+}) {
   return (
     <ul className="allTodos">
       {todos.map((todo) => (
@@ -10,6 +15,7 @@ export default function TodoList({ todos, handleEdit, handleDelete }) {
           todo={todo}
           handleEdit={handleEdit}
           handleDelete={handleDelete}
+          handleToggle={handleToggle}
         />
       ))}
     </ul>

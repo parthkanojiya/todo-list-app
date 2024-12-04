@@ -7,10 +7,11 @@ export default function TodoForm({ todo, setTodo, handleSubmit, editId }) {
         type="text"
         value={todo}
         onChange={(e) => setTodo(e.target.value)}
-        placeholder="Enter a todo"
+        placeholder="What needs to be done?"
+        className="input-field"
       />
       <button type="submit" className="sbmt-btn">
-        {editId ? "Edit" : "Go"}
+        {editId ? "Edit" : "Add todo"}
       </button>
     </form>
   );
